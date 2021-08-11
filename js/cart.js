@@ -6,6 +6,7 @@ const table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 let cart;
 
+
 function loadCart() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     cart = new Cart(cartItems);
@@ -36,8 +37,15 @@ function showCart() {
 function removeItemFromCart(event) {
 
     // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
+    // table.event = removeItem(cart);
+
     // TODO: Save the cart back to local storage
+
+
+
     // TODO: Re-draw the cart table
+
+
 
 }
 
