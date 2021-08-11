@@ -38,14 +38,14 @@ function handleSubmit(event) {
 function addSelectedItemToCart() {
 
     // TODO: suss out the item picked from the select list
-    let itemSelect = document.getElementById('items').handleSubmit;
+    let itemSelect = document.getElementById('items').value;
 
     // TODO: get the quantity
-    let quantitySelect = document.getElementById('quantity').handleSubmit;
+    let quantitySelect = document.getElementById('quantity').value;
     // TODO: using those, add one item to the Cart
 
     cart.addItem(itemSelect, quantitySelect);
-
+    cart.saveToLocalStorage();
 
 }
 let number = 1;
@@ -59,8 +59,8 @@ function updateCounter() {
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
     // TODO: Get the item and quantity from the form
-    let itemSelect = document.getElementById('items').handleSubmit;
-    let quantitySelect = document.getElementById('quantity').handleSubmit;
+    let itemSelect = document.getElementById('items').value;
+    let quantitySelect = document.getElementById('quantity').value;
 
     // TODO: Add a new element to the cartContents div with that information
     const cartContents = document.getElementById('cartContents');
