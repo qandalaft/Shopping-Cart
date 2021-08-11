@@ -12,7 +12,9 @@ function populateForm() {
     //TODO: Add an <option> tag inside the form's select for each product
     const selectElement = document.getElementById('items');
     for (let i in Product.allProducts) {
-
+        let options = document.createElement('option');
+        options.textContent = Product.allProducts[i].name;
+        selectElement.appendChild(options)
     }
 
 }
@@ -40,7 +42,7 @@ function addSelectedItemToCart() {
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { }
+function updateCounter() {}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
