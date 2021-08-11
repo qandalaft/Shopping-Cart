@@ -25,7 +25,7 @@ function populateForm() {
 function handleSubmit(event) {
 
     // TODO: Prevent the page from reloading
-
+    event.preventDefault();
     // Do all the things ...
     addSelectedItemToCart();
     cart.saveToLocalStorage();
@@ -38,19 +38,23 @@ function handleSubmit(event) {
 function addSelectedItemToCart() {
 
     // TODO: suss out the item picked from the select list
-    let itemSelect = document.getElementById('items').submit();
+    let itemSelect = document.getElementById('items').handleSubmit;
 
     // TODO: get the quantity
-    let quantitySelect = document.getElementById('quantity').submit();
+    let quantitySelect = document.getElementById('quantity').handleSubmit;
     // TODO: using those, add one item to the Cart
 
     cart.addItem(itemSelect, quantitySelect);
 
 
 }
-
+let number = 1;
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { }
+function updateCounter() {
+
+    let cartCount = document.getElementById('itemCount');
+    cartCount.textContent = number++;
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
